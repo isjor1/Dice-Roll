@@ -3,34 +3,31 @@
 <head>
     <title>Dice Roll</title>
 </head>
-<body>
+<body onload="dieRoll()">
     <p>Click the button to roll the dice</p>
     <button onclick="dieRoll()">Roll Dice</button>
     <p id="Dice"></p>
 
     <p>Click the button to roll the dice</p>
-    <button onclick="dieRoll2()">Roll Dice</button>
+    <button onclick="dieRoll()">Roll Dice</button>
     <p id="Dice2"></p>
 
     <p>Click the button to roll the dice</p>
-    <button onclick="dieRoll3()">Roll Dice</button>
+    <button onclick="dieRoll()">Roll Dice</button>
     <p id="Dice3"></p>
 
 
 <script>
     function dieRoll() {
         var x = Math.floor((Math.random() * 6) + 1);
-        document.getElementById("Dice").innerHTML = x;
-    }
-        function dieRoll2() {
-        var x = Math.floor((Math.random() * 6) + 1);
-        document.getElementById("Dice2").innerHTML = x;
-        }
-        function dieRoll3() {
-        var x = Math.floor((Math.random() * 6) + 1);
-        document.getElementById("Dice3").innerHTML = x;
-       
+        document.getElementById("Dice").innerHTML = "You rolled " + x;
+    
+        var y = Math.floor((Math.random() * 6) + 1);
+        document.getElementById("Dice2").innerHTML = "You rolled " + y;
         
+        var z = Math.floor((Math.random() * 6) + 1);
+        document.getElementById("Dice3").innerHTML ="You rolled " + z;
+         
     }
 </script>
 </body>
